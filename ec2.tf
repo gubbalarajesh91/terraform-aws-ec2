@@ -1,9 +1,9 @@
 resource "aws_instance" "db" {
-  ami =
-  vpc_security_group_ids =
-  instance_type = 
+  ami = var.ami_id
+  vpc_security_group_ids = var.security_group_ids
+  instance_type = var.instance_type
 
-  tags = {
+  tags = var.tags
     
   }
-}
+
